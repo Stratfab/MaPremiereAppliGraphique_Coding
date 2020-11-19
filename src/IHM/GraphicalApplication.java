@@ -13,6 +13,13 @@ import java.util.ArrayList;
 import static javax.swing.JOptionPane.showMessageDialog;
 
 public class GraphicalApplication extends JFrame {
+
+
+    JRadioButton romanBouton;
+    JRadioButton magazineBouton;
+    JRadioButton mangaBouton;
+
+
     public GraphicalApplication() {
 
         /*********************************************/
@@ -20,7 +27,7 @@ public class GraphicalApplication extends JFrame {
         /*********************************************/
         super("L'appli graphique bancale de Fabien");
         this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        this.setSize(800, 600);
+        this.setSize(1200, 800);
         this.setLocationRelativeTo(null);
 
         /********************************************************/
@@ -103,10 +110,23 @@ public class GraphicalApplication extends JFrame {
         monBoutonBiblio.setText("Biblio");
 
         JButton monBoutonLetrreA = new JButton();
-        monBoutonLetrreA.setText("première lettre A");
+        monBoutonLetrreA.setText("Première lettre A");
 
         JButton monBoutonIndiceImpair = new JButton();
         monBoutonIndiceImpair.setText("Indices impairs");
+
+        romanBouton = new JRadioButton("Roman");
+        magazineBouton = new JRadioButton("Magazine");
+        mangaBouton = new JRadioButton("Manga");
+
+        ButtonGroup genre = new ButtonGroup();
+        genre.add(romanBouton);
+        genre.add(magazineBouton);
+        genre.add(mangaBouton);
+
+        this.add(romanBouton);
+        this.add(magazineBouton);
+        this.add(mangaBouton);
 
 
         JLabel labelCR = new JLabel();
@@ -266,6 +286,16 @@ public class GraphicalApplication extends JFrame {
 
     }
 
-}
+   /* public void actionperformed(ActionEvent e) {
 
+        if (romanBouton.isSelected())
+
+        if (magazineBouton.isSelected())
+
+            if (mangaBouton.isSelected())
+
+
+
+    }*/
+}
 
